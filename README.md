@@ -50,6 +50,38 @@ python3 install.py
 
 ---
 
+# 🎯 **POWERFUL IDE INTEGRATION**
+
+## 🤖 **Claude Desktop & Cursor IDE Ready!**
+
+After installation, you'll have **seamless integration** with:
+
+### 🖥️ **Claude Desktop** 
+**Professional AI assistant with Yango Tech powers**
+- 💬 **Natural language queries** to Yango Tech API
+- 🔍 **Smart product search** with readable names  
+- 📋 **Order management** through conversation
+- 📊 **Real-time inventory** checking
+
+### ⚡ **Cursor IDE**
+**AI-powered code editor with business data access**
+- 🛠️ **Code while querying** [Yango Tech](https://yango-tech.com/) data
+- 🔄 **API integration** directly in your workflow
+- 📝 **Documentation generation** with real data
+- 🚀 **Rapid prototyping** with live business insights
+
+### 🎨 **Why This Is Game-Changing:**
+
+**Instead of switching between multiple tools**, you can:
+- ✨ **Ask Claude**: *"Show me details for order 240920-728268"*
+- ✨ **Ask Cursor**: *"What products are low in stock at store L001?"*  
+- ✨ **Get instant answers** with **human-readable product names**
+- ✨ **Work faster** with **natural language** instead of complex API calls
+
+**🔗 All powered by [Yango Tech](https://yango-tech.com/) - your ecommerce automation platform!**
+
+---
+
 ## After installation
 
 1. **Restart Claude Desktop and/or Cursor IDE** (if installed)
