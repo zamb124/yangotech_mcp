@@ -55,6 +55,77 @@ class TestProduct:
         assert product.name == "Test Product"
         assert product.barcode == ["1234567890"]
 
+    def test_product_name_priority_english_first(self):
+        """Test that English (en_EN) is prioritized for product name."""
+        product = Product(
+            product_id="12345",
+            master_category="food",
+            status="active",
+            is_meta=False,
+            custom_attributes={
+                "shortNameLoc": {
+                    "ru_RU": "Тестовый продукт",
+                    "en_EN": "Test Product EN",
+                    "uz_UZ": "Test mahsulot"
+                },
+                "longName": {
+                    "ru_RU": "Длинное имя продукта",
+                    "en_EN": "Long Product Name EN",
+                    "fr_FR": "Nom de produit long"
+                }
+            }
+        )
+
+        # Should pick English versions
+        assert product.name == "Test Product EN"
+        assert product.long_name == "Long Product Name EN"
+
+    def test_product_name_fallback_any_language(self):
+        """Test that any available language is used when en_EN is not available."""
+        product = Product(
+            product_id="12345",
+            master_category="food",
+            status="active",
+            is_meta=False,
+            custom_attributes={
+                "shortNameLoc": {
+                    "de_DE": "Testprodukt",
+                    "fr_FR": "Produit de test"
+                },
+                "longName": {
+                    "ja_JP": "テスト製品",
+                    "it_IT": "Prodotto di prova"
+                }
+            }
+        )
+
+        # Should pick first available (order may vary)
+        assert product.name in ["Testprodukt", "Produit de test"]
+        assert product.long_name in ["テスト製品", "Prodotto di prova"]
+
+    def test_product_name_empty_values_handled(self):
+        """Test that empty values are skipped properly."""
+        product = Product(
+            product_id="12345",
+            master_category="food",
+            status="active",
+            is_meta=False,
+            custom_attributes={
+                "shortNameLoc": {
+                    "en_EN": "",  # Empty string should be skipped
+                    "ru_RU": "Тестовый продукт"
+                },
+                "longName": {
+                    "en_EN": None,  # None should be skipped
+                    "ru_RU": "Длинное имя"
+                }
+            }
+        )
+
+        # Should skip empty en_EN and pick ru_RU
+        assert product.name == "Тестовый продукт"
+        assert product.long_name == "Длинное имя"
+
 
 class TestPrice:
     """Tests for price model."""

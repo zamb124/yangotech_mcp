@@ -55,7 +55,14 @@ class Product(BaseModel):
         """Get product name."""
         short_name = self.custom_attributes.get("shortNameLoc", {})
         if isinstance(short_name, dict):
-            return short_name.get("ru_RU") or short_name.get("uz_UZ")
+            # Try English first (en_EN)
+            if "en_EN" in short_name and short_name["en_EN"]:
+                return short_name["en_EN"]
+            
+            # If English not found, try any available language
+            for lang_code, name in short_name.items():
+                if name:  # Return first non-empty name found
+                    return name
         return None
 
     @property
@@ -63,7 +70,14 @@ class Product(BaseModel):
         """Get full product name."""
         long_name = self.custom_attributes.get("longName", {})
         if isinstance(long_name, dict):
-            return long_name.get("ru_RU") or long_name.get("uz_UZ")
+            # Try English first (en_EN)
+            if "en_EN" in long_name and long_name["en_EN"]:
+                return long_name["en_EN"]
+                
+            # If English not found, try any available language
+            for lang_code, name in long_name.items():
+                if name:  # Return first non-empty name found
+                    return name
         return None
 
     @property
