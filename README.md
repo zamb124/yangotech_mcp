@@ -70,7 +70,7 @@ After installation, you'll have **seamless integration** with:
 
 **🎬 Live Product Search Demo:**
 
-https://github.com/user-attachments/assets/claude_products_report_video.mov
+![Claude Products Demo](source/claude_products_report.gif)
 
 **📦 Inventory Management:**
 ![Claude Stock Report](source/claude%20stock%20report.png)
