@@ -63,6 +63,24 @@ After installation, you'll have **seamless integration** with:
 - 📋 **Order management** through conversation
 - 📊 **Real-time inventory** checking
 
+#### 📸 **See Claude Desktop in Action:**
+
+**🛍️ Product Catalog Analysis:**
+![Claude Product Report](source/claude%20product%20report.png)
+
+**🎬 Live Product Search Demo:**
+
+https://github.com/user-attachments/assets/claude-products-report-video.mov
+
+**📦 Inventory Management:**
+![Claude Stock Report](source/claude%20stock%20report.png)
+
+**📋 Order Details Lookup:**
+![Claude Order Detail](source/claude%20order%20detail.png)
+
+**🔍 Order Status Tracking:**
+![Claude Order Status](source/claude%20order%20status.png)
+
 ### ⚡ **Cursor IDE**
 **AI-powered code editor with business data access**
 - 🛠️ **Code while querying** [Yango Tech](https://yango-tech.com/) data
