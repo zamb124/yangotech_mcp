@@ -63,7 +63,7 @@ async def ensure_products_cache() -> None:
     print(f"✅ Products cache loaded: {len(_products_cache)} products")
 
 
-def get_product_name(product_id: str, language: str = "ru_RU") -> str:
+def get_product_name(product_id: str, language: str = "en_EN") -> str:
     """Get product name from cache by product_id."""
     if not _cache_loaded or product_id not in _products_cache:
         return product_id  # Return product_id if not found
@@ -73,16 +73,26 @@ def get_product_name(product_id: str, language: str = "ru_RU") -> str:
     # Try shortNameLoc first
     short_name = product.custom_attributes.get("shortNameLoc", {})
     if isinstance(short_name, dict):
-        name = short_name.get(language) or short_name.get("ru_RU") or short_name.get("uz_UZ")
-        if name:
-            return name
+        # Try requested language first
+        if language in short_name and short_name[language]:
+            return short_name[language]
+        
+        # If requested language not found, try any available language
+        for lang_code, name in short_name.items():
+            if name:  # Return first non-empty name found
+                return name
 
     # Try longName if shortNameLoc not found
     long_name = product.custom_attributes.get("longName", {})
     if isinstance(long_name, dict):
-        name = long_name.get(language) or long_name.get("ru_RU") or long_name.get("uz_UZ")
-        if name:
-            return name
+        # Try requested language first
+        if language in long_name and long_name[language]:
+            return long_name[language]
+            
+        # If requested language not found, try any available language
+        for lang_code, name in long_name.items():
+            if name:  # Return first non-empty name found
+                return name
 
     return product_id  # Fallback to product_id
 
