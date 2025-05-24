@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+.idea/
+/idea
+*.egg-info
+
+# Virtual environments
+.venv
+/.env
+/claude_desktop_config.json
+/cursor_settings.json
