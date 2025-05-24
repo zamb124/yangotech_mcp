@@ -20,7 +20,7 @@ This project provides integration with **[Yango Tech](https://yango-tech.com/)**
 - 📊 **Analytics and sales reporting**
 - 🔄 **API integration** for B2B automation
 
-Through this MCP server, you can easily interact with the Yango Tech API directly from Claude Desktop or Cursor IDE, gaining access to orders, products, stock levels, and other platform information.
+Through this MCP server, you can easily interact with the Yango Tech API directly from [Claude Desktop](https://www.anthropic.com/claude) or [Cursor IDE](https://www.cursor.com/), gaining access to orders, products, stock levels, and other platform information.
 
 ## For Users - Simple Installation
 
@@ -39,7 +39,7 @@ python3 install.py
 1. ✅ **Automatically detects your OS** (Mac/Windows/Linux)
 2. ✅ **Finds Python** and creates virtual environment
 3. ✅ **Installs all dependencies** automatically (including FastMCP 2.5+)
-4. ✅ **Detects installed IDEs** (Claude Desktop & Cursor IDE)
+4. ✅ **Detects installed IDEs** ([Claude Desktop](https://www.anthropic.com/claude) & [Cursor IDE](https://www.cursor.com/))
 5. ✅ **Offers test API key** or your own
 6. ✅ **Creates IDE configurations** automatically (if IDEs installed)
 7. ✅ **Generates config files** in project root for manual setup
@@ -52,18 +52,18 @@ python3 install.py
 
 # 🎯 **POWERFUL IDE INTEGRATION**
 
-## 🤖 **Claude Desktop & Cursor IDE Ready!**
+## 🤖 **[Claude Desktop](https://www.anthropic.com/claude) & [Cursor IDE](https://www.cursor.com/) Ready!**
 
 After installation, you'll have **seamless integration** with:
 
-### 🖥️ **Claude Desktop** 
+### 🖥️ **[Claude Desktop](https://www.anthropic.com/claude)** 
 **Professional AI assistant with Yango Tech powers**
 - 💬 **Natural language queries** to Yango Tech API
 - 🔍 **Smart product search** with readable names  
 - 📋 **Order management** through conversation
 - 📊 **Real-time inventory** checking
 
-#### 📸 **See Claude Desktop in Action:**
+#### 📸 **See [Claude Desktop](https://www.anthropic.com/claude) in Action:**
 
 **🛍️ Product Catalog Analysis:**
 ![Claude Product Report](source/claude%20product%20report.png)
@@ -81,7 +81,7 @@ After installation, you'll have **seamless integration** with:
 **🔍 Order Status Tracking:**
 ![Claude Order Status](source/claude%20order%20status.png)
 
-### ⚡ **Cursor IDE**
+### ⚡ **[Cursor IDE](https://www.cursor.com/)**
 **AI-powered code editor with business data access**
 - 🛠️ **Code while querying** [Yango Tech](https://yango-tech.com/) data
 - 🔄 **API integration** directly in your workflow
@@ -92,7 +92,7 @@ After installation, you'll have **seamless integration** with:
 
 **Instead of switching between multiple tools**, you can:
 - ✨ **Ask Claude**: *"Show me details for order 240920-728268"*
-- ✨ **Ask Cursor**: *"What products are low in stock at store L001?"*  
+- ✨ **Ask [Cursor](https://www.cursor.com/)**: *"What products are low in stock at store L001?"*  
 - ✨ **Get instant answers** with **human-readable product names**
 - ✨ **Work faster** with **natural language** instead of complex API calls
 
@@ -102,7 +102,7 @@ After installation, you'll have **seamless integration** with:
 
 ## After installation
 
-1. **Restart Claude Desktop and/or Cursor IDE** (if installed)
+1. **Restart [Claude Desktop](https://www.anthropic.com/claude) and/or [Cursor IDE](https://www.cursor.com/)** (if installed)
 2. **You'll have 6 Yango Tech tools with product name enrichment:**
    - `get_order_details` - Get order details with product names
    - `get_order_status` - Get order status  
@@ -119,8 +119,8 @@ After installation, you'll have **seamless integration** with:
 
 The installer always creates these files in the project root:
 
-- **`claude_desktop_config.json`** - Ready-to-use Claude Desktop configuration
-- **`cursor_settings.json`** - Ready-to-use Cursor IDE configuration
+- **`claude_desktop_config.json`** - Ready-to-use [Claude Desktop](https://www.anthropic.com/claude) configuration
+- **`cursor_settings.json`** - Ready-to-use [Cursor IDE](https://www.cursor.com/) configuration
 
 **Use these files for:**
 - Manual IDE setup
@@ -130,7 +130,7 @@ The installer always creates these files in the project root:
 
 ---
 
-## 🧪 Test commands for Claude Desktop & Cursor IDE:
+## 🧪 Test commands for [Claude Desktop](https://www.anthropic.com/claude) & [Cursor IDE](https://www.cursor.com/):
 
 - **"Show 5 products from Yango Tech catalog"** (with product names)
 - **"Show product stocks in stores"** (with product names)
@@ -143,7 +143,7 @@ The installer always creates these files in the project root:
 
 - **Python 3.8+** (automatically detected and verified)
 - **Internet** for downloading dependencies
-- **Claude Desktop** and/or **Cursor IDE** (optional - configs generated anyway)
+- **[Claude Desktop](https://www.anthropic.com/claude)** and/or **[Cursor IDE](https://www.cursor.com/)** (optional - configs generated anyway)
 
 ### 🐍 Don't have Python installed?
 
@@ -227,11 +227,11 @@ python server.py
 
 ### Technology Stack
 
-- **FastMCP 2.5+**: Modern MCP server framework
-- **Python 3.8+**: Core language
-- **HTTPx**: Async HTTP client
-- **Pydantic**: Data validation
-- **python-dotenv**: Environment management
+- **[FastMCP 2.5+](https://github.com/jlowin/fastmcp)**: Modern MCP server framework
+- **[Python 3.8+](https://www.python.org/)**: Core language
+- **[HTTPx](https://www.python-httpx.org/)**: Async HTTP client
+- **[Pydantic](https://docs.pydantic.dev/latest/)**: Data validation
+- **[python-dotenv](https://github.com/theskumar/python-dotenv)**: Environment management
 
 ### API Endpoints
 
@@ -244,8 +244,8 @@ Server works with real Yango Tech API:
 
 ### IDE Support
 
-- **Claude Desktop**: Uses `mcpServers` configuration
-- **Cursor IDE**: Uses `mcp.servers` configuration
+- **[Claude Desktop](https://www.anthropic.com/claude)**: Uses `mcpServers` configuration
+- **[Cursor IDE](https://www.cursor.com/)**: Uses `mcp.servers` configuration
 - **Auto-detection**: Installer detects which IDEs are installed
 - **Universal**: Works without IDEs - configs always generated
 
@@ -261,9 +261,9 @@ If something doesn't work:
 2. **Complete reset**: `python3 cleanup.py && python3 install.py`
 3. **Manual setup**: Use generated config files (`claude_desktop_config.json`, `cursor_settings.json`)
 4. **Manual setup guide**: [MANUAL_SETUP.md](MANUAL_SETUP.md) for detailed instructions
-5. **Check IDE logs** (Claude Desktop or Cursor IDE)
+5. **Check IDE logs** ([Claude Desktop](https://www.anthropic.com/claude) or [Cursor IDE](https://www.cursor.com/))
 6. **Make sure** IDEs are restarted after installation
 
 ---
 
-**🎯 Goal: One command - and everything works in both Claude Desktop and Cursor IDE (or generates configs for manual setup)!**
+**🎯 Goal: One command - and everything works in both [Claude Desktop](https://www.anthropic.com/claude) and [Cursor IDE](https://www.cursor.com/) (or generates configs for manual setup)!**
